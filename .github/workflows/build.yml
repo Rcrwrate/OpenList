@@ -44,6 +44,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Change strings
+        run: |
+          python replace_string.py ./ https://cdn.oplist.org/gh/OpenListTeam/Logo@main/logo.png https://cos.elysia.rip/favicon.ico
+          python replace_string.py ./ https://cdn.oplist.org/gh/OpenListTeam/Logo@main/logo.svg https://cos.elysia.rip/favicon.ico
+
+
       - name: Build
         uses: OpenListTeam/cgo-actions@v1.1.2
         with:
