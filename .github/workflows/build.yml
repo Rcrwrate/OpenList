@@ -48,7 +48,8 @@ jobs:
         run: |
           python replace_string.py ./ https://cdn.oplist.org/gh/OpenListTeam/Logo@main/logo.png https://cos.elysia.rip/favicon.ico
           python replace_string.py ./ https://cdn.oplist.org/gh/OpenListTeam/Logo@main/logo.svg https://cos.elysia.rip/favicon.ico
-
+          python replace_string.py ./ https://docs.oplist.org/logo.png https://cos.elysia.rip/favicon.ico
+          python replace_string.py ./ "由 OpenList 驱动" ""
 
       - name: Build
         uses: OpenListTeam/cgo-actions@v1.1.2
